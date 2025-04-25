@@ -1,3 +1,7 @@
 1. Clone or download this GitHub repo
 2. then open terminal in your vs code -> type 'npm i' -> then type 'npm run dev'
 3. Boom! your project is not running on you localhost:5173
+
+const serviceID = "service_czgbnrp"; 
+    const templateID = "template_19s57ua"; 
+    const userID = "oci8KPreVm8uKlz41"; 
