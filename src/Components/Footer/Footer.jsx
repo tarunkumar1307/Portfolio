@@ -9,7 +9,7 @@ const Footer = () => {
   });
 
   const [status, setStatus] = useState("");
-3
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -50,25 +50,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="font-geist bg-[#0d1638] text-white p-10 md:p-16 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <footer id="Footer" className="font-geist bg-[#0D1638] text-[var(--primary-text)] px-4 md:px-20 py-16 pt-16 flex flex-col md:flex-row justify-between items-start md:items-center">
       <div className="mb-6 md:mb-0">
         <h2 className="text-2xl md:text-4xl font-bold mb-2">📬 Contact Me</h2>
-        <p className="text-sm md:text-lg opacity-80">Get in Touch</p>
+        <p className="text-sm md:text-lg text-[var(--tertiary-text)]">Get in Touch</p>
 
-        {/* Added Address, Phone, Email */}
         <div className="mt-6 space-y-4">
-          <p className="text-sm"> 
+          <p className="text-sm text-[var(--secondary-text)]"> 
             <strong>Address:</strong> <br /> 
             Bhiwadi, Alwar<br /> 
             Rajasthan, India - 301019
           </p>
           <p className="text-sm">
             <strong>Email:</strong>  <br /> 
-            <a href="mailto:sskumartarun@gmail.com" className="text-[#FFDD95]">sskumartarun@gmail.com</a>
+            <a href="mailto:sskumartarun@gmail.com" className="text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)]">sskumartarun@gmail.com</a>
           </p>
           <p className="text-sm">
             <strong>Phone:</strong> <br /> 
-            <a href="tel:+919269998482" className="text-[#FFDD95]">+91 9269998482</a>
+            <a href="tel:+919269998482" className="text-[var(--accent-primary)] hover:text-[var(--accent-primary-hover)]">+91 9269998482</a>
           </p>
         </div>
       </div>
@@ -83,7 +82,7 @@ const Footer = () => {
           value={formData.user_name}
           onChange={handleChange}
           required
-          className="w-full p-2 rounded-md bg-[#1b263b] border-2 border-[#333] text-white"
+          className="w-full p-2 rounded-md bg-[var(--secondary-bg)] border-2 border-[var(--tertiary-text)] text-[var(--secondary-text)]"
         />
         <input
           type="text"
@@ -92,7 +91,7 @@ const Footer = () => {
           value={formData.user_contact}
           onChange={handleChange}
           required
-          className="w-full p-2 rounded-md bg-[#1b263b] border-2 border-[#333] text-white"
+          className="w-full p-2 rounded-md bg-[var(--secondary-bg)] border-2 border-[var(--tertiary-text)] text-[var(--secondary-text)]"
         />
         <textarea
           name="message"
@@ -101,19 +100,18 @@ const Footer = () => {
           onChange={handleChange}
           required
           rows="5"
-          className="w-full p-2 rounded-md bg-[#1b263b] border-2 border-[#333] text-white"
+          className="w-full p-2 rounded-md bg-[var(--secondary-bg)] border-2 border-[var(--tertiary-text)] text-[var(--secondary-text)]"
         />
         <button
           type="submit"
-          className="w-full bg-[#FFDD95] text-black font-bold py-2 rounded-md hover:bg-[#FFBB77]"
+          className="w-full bg-[var(--accent-primary)] text-black font-bold py-2 rounded-md hover:bg-[var(--accent-primary-hover)] transition-colors duration-200"
         >
           Send Message
         </button>
       </form>
 
-      {/* Success or Error message */}
       {status && (
-        <p className="mt-4 text-center text-lg text-white">{status}</p>
+        <p className="mt-4 text-center text-lg text-[var(--primary-text)]">{status}</p>
       )}
     </footer>
   );

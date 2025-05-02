@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { RiCloseLine, RiMenu2Line } from "@remixicon/react";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, openMenu] = useState(false);
@@ -31,21 +30,51 @@ const Navbar = () => {
             menu ? "block" : "hidden"
           } md:flex gap-6 font-medium text-sm md:text-base md:static absolute top-16 right-6 md:top-0 md:right-0 bg-[#1A1F37] md:bg-transparent rounded-xl px-4 py-4 md:p-0 z-10`}
         >
-          <a href="#About">
-            <li className="hover:text-gray-300 transition duration-300 p-1 md:p-0">About</li>
-          </a>
-          <a href="#Experience">
-            <li className="hover:text-gray-300 transition duration-300 p-1 md:p-0">Skills</li>
-          </a>
-          <a href="#Projects">
-            <li className="hover:text-gray-300 transition duration-300 p-1 md:p-0">Projects</li>
-          </a>
-          <a href="#Certifications">
-            <li className="hover:text-gray-300 transition duration-300 p-1 md:p-0">Certifications</li>
-          </a>
-          <a href="#Footer">
-            <li className="hover:text-gray-300 transition duration-300 p-1 md:p-0">Contact</li>
-          </a>
+          <li>
+            <a
+              href="#About"
+              className="hover:text-gray-300 transition duration-300 p-1 md:p-0"
+              onClick={() => openMenu(false)}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Experience"
+              className="hover:text-gray-300 transition duration-300 p-1 md:p-0"
+              onClick={() => openMenu(false)}
+            >
+              Skills
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Projects"
+              className="hover:text-gray-300 transition duration-300 p-1 md:p-0"
+              onClick={() => openMenu(false)}
+            >
+              Projects
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Certifications"
+              className="hover:text-gray-300 transition duration-300 p-1 md:p-0"
+              onClick={() => openMenu(false)}
+            >
+              Certifications
+            </a>
+          </li>
+          <li>
+            <a
+              href="#Footer"
+              className="hover:text-gray-300 transition duration-300 p-1 md:p-0"
+              onClick={() => openMenu(false)}
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -4,10 +4,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary-bg: #0A0F24;
+    --secondary-bg: #1A1F37;
+    --primary-text: #FFFFFF;
+    --secondary-text: #D1D5DB;
+    --tertiary-text: #9CA3AF;
+    --accent-primary: #FFDD95;
+    --accent-primary-hover: #FFBB77;
+    --accent-secondary: #4A90E2;
+    --accent-secondary-hover: #357ABD;
+  }
+}
+
 body {
   font-family: 'Geist Mono', monospace;
+  background-color: var(--primary-bg);
+  color: var(--secondary-text);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Offset scroll targets to account for fixed navbar (~64px height) */
+[id]:not(:empty) {
+  scroll-margin-top: 4rem; /* 64px */
 }

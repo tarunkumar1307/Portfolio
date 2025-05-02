@@ -5,10 +5,10 @@ import NQueen from "../../assets/Screenshot from 2024-07-12 11-23-58.png";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="bg-[#11172B] text-white w-full px-6 md:px-20 py-16 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-center mb-12">Projects</h1>
+    <div id="Projects" className="bg-[var(--primary-bg)] text-[var(--primary-text)] w-full px-4 md:px-20 py-16 pt-16 flex flex-col items-center">
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">Projects</h1>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl w-full mx-auto">
         <ProjectCard
           bannerImg={WeatherAPI}
           title="Weather API"

@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import About from "./Components/About/About";
 import Experience from "./Components/Experience/Experience";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
@@ -12,7 +13,7 @@ function App() {
   const isResumePage = location.pathname === '/resume';
 
   return (
-    <div className="bg-[#0E1325] h-auto w-full overflow-hidden">
+    <div className="bg-[var(--primary-bg)] h-auto w-full overflow-hidden">
       {/* Show Navbar unless on Resume page */}
       {!isResumePage && <Navbar />}
 
@@ -20,9 +21,10 @@ function App() {
         <Route path="/" element={
           <>
             <Home />
+            <About />
             <Experience />
             <Projects />
-            <Certifications /> {/* Added Certifications to Home page */}
+            <Certifications />
             <Footer />
           </>
         } />
